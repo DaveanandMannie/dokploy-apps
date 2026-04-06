@@ -39,7 +39,9 @@ services:
       - GITEA__repository__ROOT=/data/git/repositories
       - GITEA__repository__DISABLE_HTTP_GIT=false
       # Repository signing
-      - GITEA__repository__signing__DEFAULT_TRUST_MODEL=committer
+      - GITEA__repository_0X2E_signing__DEFAULT_TRUST_MODEL=committer
+      # Repository pull-request
+      - GITEA__repository_0X2E_pull_0X2D_request__DEFAULT_MERGE_STYLE=merge
       # Security
       - GITEA__security__INSTALL_LOCK=true
       - GITEA__security__INTERNAL_TOKEN=${GITEA_INTERNAL_TOKEN}
@@ -71,7 +73,7 @@ services:
       - GITEA__log__MODE=console
       - GITEA__log__LEVEL=info
       # Cron
-      - GITEA__cron__update_checker__ENABLED=false
+      - GITEA__cron_0X2E_update_checker__ENABLED=false
       # Other
       - GITEA__other__SHOW_FOOTER_POWERED_BY=false
     volumes:
