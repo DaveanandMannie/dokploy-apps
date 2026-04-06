@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 echo "==== GitHub mirror start: $(date) ===="
-git push --mirror <ssh uri to mirror repo>
+git push <ssh repo ur> +refs/heads/*:refs/heads/* +refs/tags/*:refs/tags/*
 echo "==== GitHub mirror end: $(date) ===="
