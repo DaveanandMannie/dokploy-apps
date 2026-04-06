@@ -1,5 +1,5 @@
 services:
-  gitea:
+  app:
     image: gitea/gitea:latest
     environment:
       - USER_UID=1000
