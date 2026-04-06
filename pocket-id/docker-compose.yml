@@ -3,6 +3,7 @@ services:
     image: ghcr.io/pocket-id/pocket-id:latest
     environment:
       - APP_URL=https://auth.routinedevelopment.ca
+      - APP_NAME=Routine Auth
       - TRUST_PROXY=true
       - PUID=1000
       - PGID=1000
