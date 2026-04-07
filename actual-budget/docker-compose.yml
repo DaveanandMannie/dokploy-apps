@@ -6,7 +6,7 @@ services:
       - ACTUAL_OPENID_DISCOVERY_URL=https://auth.routinedevelopment.ca/.well-known/openid-configuration
       - ACTUAL_OPENID_CLIENT_ID=${OPENID_CLIENT_ID}
       - ACTUAL_OPENID_CLIENT_SECRET=${OPENID_CLIENT_SECRET}
-      - ACTUAL_OPENID_SERVER_HOSTNAME=https://personal-budget.routinedevelopment.ca
+      - ACTUAL_OPENID_SERVER_HOSTNAME=https://budget.themanniefamily.ca
       - ACTUAL_OPENID_ENFORCE=true
       - ACTUAL_USER_CREATION_MODE=login
     volumes:
@@ -15,7 +15,7 @@ services:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.actual.rule=Host(`personal-budget.routinedevelopment.ca`)"
+      - "traefik.http.routers.actual.rule=Host(`budget.themanniefamily.ca`)"
       - "traefik.http.routers.actual.entrypoints=websecure"
       - "traefik.http.routers.actual.tls.certresolver=letsencrypt"
       - "traefik.http.services.actual.loadbalancer.server.port=5006"
