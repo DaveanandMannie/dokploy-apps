@@ -23,7 +23,7 @@ services:
       test: ['CMD-SHELL', 'node src/scripts/health-check.js']
       interval: 60s
       timeout: 10s
-      retries: 3
+      retries: 1
       start_period: 20s
     restart: unless-stopped
 
