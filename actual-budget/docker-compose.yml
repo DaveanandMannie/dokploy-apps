@@ -15,10 +15,6 @@ services:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.actual.rule=Host(`budget.themanniefamily.ca`)"
-      - "traefik.http.routers.actual.entrypoints=websecure"
-      - "traefik.http.routers.actual.tls.certresolver=letsencrypt"
-      - "traefik.http.services.actual.loadbalancer.server.port=5006"
     healthcheck:
       test: ['CMD-SHELL', 'node src/scripts/health-check.js']
       interval: 60s
