@@ -84,10 +84,6 @@ services:
       - dokploy-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.gitea.rule=Host(`gitea.routinedevelopment.ca`)"
-      - "traefik.http.routers.gitea.entrypoints=websecure"
-      - "traefik.http.routers.gitea.tls.certresolver=letsencrypt"
-      - "traefik.http.services.gitea.loadbalancer.server.port=3000"
     restart: unless-stopped
 volumes:
   gitea-data:
